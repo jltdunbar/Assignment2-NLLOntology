@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#"
+     xml:base="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology">
+        <rdfs:comment>A NLL ontology that describes various staakholders in the NLL</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HasPlayers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HasPlayers">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PlaysFor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Players"/>
+        <rdfs:label>Has Players</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#IsCoachOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#IsCoachOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#IsCoachedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team"/>
+        <rdfs:label>IsCoachOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#IsCoachedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#IsCoachedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:label>IsCoachedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PlaysAgainst -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PlaysAgainst">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team"/>
+        <rdfs:label>PlaysAgainst</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PlaysFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PlaysFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Players"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Represents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Represents">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#AirCanadaCenter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#AirCanadaCenter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena"/>
+        <rdfs:label>AirCanadaCenter</rdfs:label>
+        <skos:definition>Home Arena of the Toronto Rock</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#NLL"/>
+        <skos:altLabel>Arena</skos:altLabel>
+        <skos:definition>The home arena for a NLL team</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Bomber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Bomber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot"/>
+        <rdfs:label>Bomber</rdfs:label>
+        <skos:definition>Mascot for the Vancouver Stealth</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Bruiser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Bruiser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot"/>
+        <rdfs:label>Bruiser</rdfs:label>
+        <skos:definition>Mascot for the Saskatchewan Rush</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#BuffaloBandits -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#BuffaloBandits">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#EasternDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#CalgaryRoughnecks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#CalgaryRoughnecks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#WesternDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#ColoradeMammoth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#ColoradeMammoth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#WesternDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#CurtMalawsky -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#CurtMalawsky">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:label>CurtMalawsky</rdfs:label>
+        <skos:definition>Head Coach of the Calgary Roughnecks</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#DerekKeenan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#DerekKeenan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:label>DerekKeenan</rdfs:label>
+        <skos:definition>Head coach of the Saskatchewan Rush</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#EasternDivision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#EasternDivision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#WesternDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#EdComeau -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#EdComeau">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:label>EdComeau</rdfs:label>
+        <skos:definition>Head coach of the Georgia Swarm</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#GeorgiaSwarm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#GeorgiaSwarm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#EasternDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#GlennClark -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#GlennClark">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:label>GlennClark</rdfs:label>
+        <skos:definition>Head Coach of the New England Blackwolves</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#NLL"/>
+        <skos:definition>HeadCoaches</skos:definition>
+        <skos:definition>Leader of their respective team.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Howie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Howie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot"/>
+        <rdfs:label>Howie</rdfs:label>
+        <skos:definition>Mascot for the Calgary Roughnecks</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Hunter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Hunter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot"/>
+        <rdfs:label>Hunter</rdfs:label>
+        <skos:definition>Mascot for the New England Blackwolves</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Iggy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Iggy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot"/>
+        <rdfs:label>Iggy</rdfs:label>
+        <skos:definition>Mascot for the Toronto Rock</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#InfiniteEnergyArena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#InfiniteEnergyArena">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena"/>
+        <skos:altLabel>InfiniteEnergyArena</skos:altLabel>
+        <skos:definition>Home arena of the Georgia Swarm</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#JamieBatley -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#JamieBatley">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:label>JamieBatley</rdfs:label>
+        <skos:definition>Head coach of the Vancouver Stealth</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#KeyBankCenter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#KeyBankCenter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena"/>
+        <rdfs:label>KeyBankCenter</rdfs:label>
+        <skos:definition>Home arena of the Buffalo Bandits</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#LangleyEventsCenter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#LangleyEventsCenter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena"/>
+        <rdfs:label>LangleyEventsCenter</rdfs:label>
+        <skos:definition>Home Arena of the Vancouver Stealth</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#NLL"/>
+        <rdfs:label>Mascots</rdfs:label>
+        <skos:definition>Represent their respective NLL team.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#MattSawyer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#MattSawyer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:label>MattSawyer</rdfs:label>
+        <skos:definition>Head coach of the Toronto Rock</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#MikeHasen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#MikeHasen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:label>MikeHasen</rdfs:label>
+        <skos:definition>Head Coach of the Rochester Knighthawks</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#MoheganSunArena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#MoheganSunArena">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena"/>
+        <rdfs:label>MoheganSunArena</rdfs:label>
+        <skos:definition>Home Arena for the New England Blackwolves</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#NLL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#NLL">
+        <rdfs:comment>Highest level of box lacrosse in the world.</rdfs:comment>
+        <rdfs:label>NLL</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#NewEnglandBlackWolves -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#NewEnglandBlackWolves">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#EasternDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PatCoyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PatCoyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:label>PatCoyle</rdfs:label>
+        <skos:definition>Head Coach of Colorado Mammoth</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PepsiCenter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PepsiCenter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena"/>
+        <rdfs:label>PepsiCenter</rdfs:label>
+        <skos:definition>Home arena of the Colorado Mammoth</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Players -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Players">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#NLL"/>
+        <rdfs:comment>Athletes that compete in the NLL</rdfs:comment>
+        <rdfs:label>Players</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#R.Thunder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#R.Thunder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot"/>
+        <rdfs:label>R.Thunder</rdfs:label>
+        <skos:definition>Mascot for the Rochester Knighthawks</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Rax -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Rax">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot"/>
+        <rdfs:label>Rax</rdfs:label>
+        <skos:definition>Mascot for the Buffalo Bandits</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#RochesterBlueCrossArena -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#RochesterBlueCrossArena">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena"/>
+        <rdfs:label>RochesterBlueCrossArena</rdfs:label>
+        <skos:definition>Home Arena of the Rochester Knighthawks</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#RochesterKnighthawks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#RochesterKnighthawks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#EasternDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#SaskatchewanRush -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#SaskatchewanRush">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#WesternDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#SasktelCenter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#SasktelCenter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena"/>
+        <rdfs:label>SasktelCenter</rdfs:label>
+        <skos:definition>Home Arena of the Saskatchewan Rush</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#ScotiabankSaddledome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#ScotiabankSaddledome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Arena"/>
+        <rdfs:label>ScotiabankSaddledome</rdfs:label>
+        <skos:definition>Home arena of the Calgary Roughnecks</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Stinger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Stinger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot"/>
+        <rdfs:label>Stinger</rdfs:label>
+        <skos:definition>Mascot for the Georgia Swarm</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#NLL"/>
+        <rdfs:label>Teams</rdfs:label>
+        <skos:definition>A group of people competing in the NBA in their respective division.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#TorontoRock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#TorontoRock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#EasternDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#TroyCordingley -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#TroyCordingley">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#HeadCoach"/>
+        <rdfs:label>TroyCordingley</rdfs:label>
+        <skos:definition>Head coach of the Buffalo Bandits</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#VancouverStealth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#VancouverStealth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#WesternDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#WesternDivision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#WesternDivision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Team"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Wooly -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Wooly">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Mascot"/>
+        <rdfs:label>Wooly</rdfs:label>
+        <skos:definition>Mascot for the Colorado Mammoth</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#AirCanadaCenter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#InfiniteEnergyArena"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#KeyBankCenter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#LangleyEventsCenter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#MoheganSunArena"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PepsiCenter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#RochesterBlueCrossArena"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#SasktelCenter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#ScotiabankSaddledome"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Bomber"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Bruiser"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Howie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Hunter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Iggy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#R.Thunder"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Rax"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Stinger"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#Wooly"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#BuffaloBandits"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#GeorgiaSwarm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#NewEnglandBlackWolves"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#RochesterKnighthawks"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#TorontoRock"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#CalgaryRoughnecks"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#ColoradeMammoth"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#SaskatchewanRush"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#VancouverStealth"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#CurtMalawsky"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#DerekKeenan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#EdComeau"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#GlennClark"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#JamieBatley"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#MattSawyer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#MikeHasen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#PatCoyle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jamiedunbar/ontologies/2018/2/NLLOntology#TroyCordingley"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
